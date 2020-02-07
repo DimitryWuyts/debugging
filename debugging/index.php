@@ -49,7 +49,7 @@ new_exercise(4);
 // The print_r($week) should give:  Array ( [0] => mon [1] => tues [2] => wednes [3] => thurs [4] => fri [5] => satur [6] => sun )
 // Look up whats going wrong with this code, and then fix it, with ONE CHARACTER!
 
-foreach($week as &$day) {
+foreach($week as $day) {
     $day = substr($day, 0, strlen($day)-3);
 }
 
@@ -113,4 +113,47 @@ echo copyright((int)date('Y'));
 
 //-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
 
+new_exercise(8);
+
+function login(string $email, string $password) {
+    if($email == 'john@example' && $password == 'pocahontas') {
+        return 'Welcome John Smith';
+    }
+    else return 'No access';
+}
+//should great the user with his full name (John Smith)
+$login = login('john@example', 'pocahontas');
+echo $login . "<br>";
+//no access
+$login = login('john@example', 'dfgidfgdfg');
+echo $login . "<br>";
+//no access
+$login = login('wrong@example', 'wrong');
+echo $login;
+
+//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
+
+new_exercise(9);
+
+
+function isLinkValid(string $link) {
+    $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
+
+    foreach ($unacceptables as $unacceptable) {
+        if (strpos($link, $unacceptable) !== false) {
+            return 'Unacceptable Found<br />';
+        }
+    }
+    return 'Acceptable<br />';
+}
+//invalid link
+echo isLinkValid('http://www.google.com/hack.pdf');
+//invalid link
+echo isLinkValid('https://google.com');
+//VALID link
+echo isLinkValid('http://google.com');
+//VALID link
+echo isLinkValid('http://google.com/test.txt');
+
+//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
 

@@ -17,7 +17,7 @@ function new_exercise($x) {
 
 }
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><-
+// === Exercise 2 ===
 
 new_exercise(2);
 
@@ -30,21 +30,19 @@ $monday = $week[0];
 
 echo $monday;
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><-
+// === Exercise 3 ===
 
 new_exercise(3);
 
-// === Exercise 3 ===
 // This should echo ` "Debugged !" `, fix it so that that is the literal text echo'ed
 
 $str = "“Debugged ! Also very fun”";
 echo substr($str, 3, 10);
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><-
+// === Exercise 4 ===
 
 new_exercise(4);
 
-// === Exercise 4 ===
 // Sometimes debugging code is just like looking up code and syntax...
 // The print_r($week) should give:  Array ( [0] => mon [1] => tues [2] => wednes [3] => thurs [4] => fri [5] => satur [6] => sun )
 // Look up whats going wrong with this code, and then fix it, with ONE CHARACTER!
@@ -55,7 +53,7 @@ foreach($week as $day) {
 
 print_r($week);
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><-
+// === Exercise 5 ===
 
 new_exercise(5);
 
@@ -70,10 +68,9 @@ for ($letter = 'a'; $letter <= 'z' && $letter !== 'aa'; $letter++) {
 
 print_r($arr);
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><-
+// === Exercise 6 ===
 
 new_exercise(6);
-// === Final exercise ===
 // The fixed code should echo the following at the bottom:
 // Here is the name: $name - $name2
 // $name variables are decided as seen in the code, fix all the bugs whilst keeping the functionality!
@@ -101,7 +98,7 @@ function randomHeroName()
 
 echo "Here is the name: " . combineNames();
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
+// === Exercise 7 ===
 
 new_exercise(7);
 
@@ -111,7 +108,7 @@ function copyright(int $year) {
 //print the copyright
 echo copyright((int)date('Y'));
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
+// === Exercise 8 ===
 
 new_exercise(8);
 
@@ -131,7 +128,7 @@ echo $login . "<br>";
 $login = login('wrong@example', 'wrong');
 echo $login;
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
+// === Exercise 9 ===
 
 new_exercise(9);
 
@@ -154,7 +151,7 @@ echo isLinkValid('http://google.com');
 //VALID link
 echo isLinkValid('http://google.com/test.txt');
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
+// === Exercise 10 ===
 
 new_exercise(10);
 
@@ -167,9 +164,9 @@ $areTheseFruits_length = count($areTheseFruits);
 //from here on you can change the code
 for($i=0; $i < $areTheseFruits_length; $i++) {
     if(!in_array($areTheseFruits[$i], $validFruits)) {
-        unset($areTheseFruits[$i]);
+        unset($areTheseFruits[$i]);/
     }
 }
 var_dump($areTheseFruits);//do not change this
 
-//-><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--><--
+//end

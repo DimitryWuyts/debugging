@@ -135,7 +135,6 @@ echo $login;
 
 new_exercise(9);
 
-
 function isLinkValid(string $link) {
     $unacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
 

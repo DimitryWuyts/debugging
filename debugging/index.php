@@ -164,7 +164,7 @@ $areTheseFruits_length = count($areTheseFruits);
 //from here on you can change the code
 for($i=0; $i < $areTheseFruits_length; $i++) {
     if(!in_array($areTheseFruits[$i], $validFruits)) {
-        unset($areTheseFruits[$i]);/
+        unset($areTheseFruits[$i]);
     }
 }
 var_dump($areTheseFruits);//do not change this
